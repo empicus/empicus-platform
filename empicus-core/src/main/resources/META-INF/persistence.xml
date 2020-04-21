@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="enterprise"
+		transaction-type="JTA">
+		<description>Writing Platform Persistence Unit</description>
+		<jta-data-source>java:jboss/datasources/EmpicusPlatformDS</jta-data-source>
+		<exclude-unlisted-classes>true</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property
+				name="hibernate.transaction.flush_before_completion" value="true" />
+		</properties>
+		<class>com.cloderia.enterprise.core.model.EntityStatusType</class>
+		<class>com.cloderia.enterprise.core.model.EntityStatus</class>
+		<class>com.cloderia.enterprise.document.model.DocumentCategory</class>
+		<class>com.cloderia.enterprise.document.model.DocumentType</class>
+		<class>com.cloderia.enterprise.document.model.Document</class>
+		<class>com.cloderia.enterprise.twitter.model.Tweet</class>
+		<class>com.cloderia.enterprise.party.model.PartyType</class>
+		<class>com.cloderia.enterprise.party.model.Party</class>
+		<class>com.cloderia.enterprise.party.model.Person</class>
+		<class>com.cloderia.enterprise.auth.model.UserAccount</class>
+		<class>com.cloderia.enterprise.ethereum.BlockchainWalletType</class>
+		<class>com.cloderia.enterprise.ethereum.BlockchainWallet</class>
+		<class>com.cloderia.enterprise.ethereum.BlockchainWalletAccountType</class>
+		<class>com.cloderia.enterprise.ethereum.BlockchainWalletAccount</class>
+
+		<class>com.alstrabank.writing.content.model.ContentOrder</class>
+		<class>com.alstrabank.writing.assignment.model.AcademicOrder</class>
+		<class>com.alstrabank.writing.assignment.model.AcademicOrderItem</class>
+		<class>com.alstrabank.writing.refdata.model.OrderItemType</class>
+		<class>com.alstrabank.writing.refdata.model.OrderItem</class>
+		<class>com.alstrabank.writing.assignment.model.AcademicOrderDocument</class>
+
+
+		<class>com.alstradocs.empicus.refdata.model.Country</class>
+		<class>com.alstradocs.empicus.refdata.model.GeoZone</class>
+		<class>com.alstradocs.empicus.refdata.model.GeoLocation</class>
+		<class>com.alstradocs.empicus.refdata.model.MedicalFacilityType</class>
+		<class>com.alstradocs.empicus.refdata.model.MedicalFacility</class>
+		<class>com.alstradocs.empicus.refdata.model.WorkDomain</class>
+		<class>com.alstradocs.empicus.refdata.model.OutcomeType</class>
+		<class>com.alstradocs.empicus.refdata.model.TransmissionMode</class>
+		<class>com.alstradocs.empicus.refdata.model.DiseaseSign</class>
+		<class>com.alstradocs.empicus.refdata.model.DiseaseSymptom</class>
+		<class>com.alstradocs.empicus.refdata.model.ClinicalFeature</class>
+		<class>com.alstradocs.empicus.refdata.model.DiseasePhase</class>
+		<class>com.alstradocs.empicus.refdata.model.AfterEffect</class>
+		<class>com.alstradocs.empicus.pathogen.model.PathogenCategory</class>
+		<class>com.alstradocs.empicus.pathogen.model.PathogenType</class>
+		<class>com.alstradocs.empicus.pathogen.model.Pathogen</class>
+		<class>com.alstradocs.empicus.disease.model.DiseaseCategory</class>
+		<class>com.alstradocs.empicus.disease.model.DiseaseType</class>
+		<class>com.alstradocs.empicus.disease.model.Disease</class>
+		<class>com.alstradocs.empicus.diseasecase.model.DiseaseCase</class>
+		<class>com.alstradocs.empicus.diseasecase.model.PathogenStrain</class>
+		<class>com.alstradocs.empicus.diseasecase.model.AfterEffectOccurance</class>
+		<class>com.alstradocs.empicus.diseasecase.model.DiseaseCaseStatus</class>
+		<class>com.alstradocs.empicus.diseasecase.model.DiseaseCaseDocument</class>
+		<class>com.alstradocs.empicus.contact.model.DiseaseCaseContactType</class>
+		<class>com.alstradocs.empicus.contact.model.DiseaseCaseContact</class>
+<!-- 		<class>com.alstradocs.empicus.datasource.model.DatasourceCase</class> -->
+		<class>com.alstradocs.empicus.datasource.model.DatasourceType</class>
+		<class>com.alstradocs.empicus.datasource.model.DatasourceTweet</class>
+
+
+
+		<!-- <class>com.alstrabank.writing.content.model.Tweet</class> -->
+	</persistence-unit>
+</persistence>
